@@ -5,12 +5,12 @@ import HomePage from "./pages/HomePage";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
-  const {isSignedIn} = useAuth();
+  const { isSignedIn } = useAuth();
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={isSignedIn?<HomePage /> : <LandingPage />} />
+          <Route index element={isSignedIn ? <HomePage /> : <LandingPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
