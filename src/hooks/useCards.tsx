@@ -30,13 +30,6 @@ export function useContent() {
 
   useEffect(() => {
     refresh();
-    const interval = setInterval(() => {
-      refresh();
-    }, 10 * 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
   }, [refresh]);
 
   return { contents, refresh };
